@@ -1,1 +1,76 @@
-<p>barra-navegacion works!</p>
+<!-- Barra de menú -->
+
+<div id="barra" class="grid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" >         
+        <!-- Ancho barra de menú y se mantiene en toda la página -->
+        <div id="menu-general" class="container-fluid" style="background: #17ABBF; height: 6rem">
+    <!-- Contenido Barra de menú -->
+        <a><img src="https://i.fbcd.co/products/original/59467589f8a35fd6b026fad71a8dd3252b40a86ab0e93fb96590e57d23d4aa11.jpg" alt="" style="width: 4rem"></a>   
+       <a class="navbar-brand" href="#" style="color: darkmagenta">OnLineStore</a>
+            
+            <!--Hamburgesa-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <!--**************-->
+      
+    <!--Contenedor de Menú-->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #17ABBF">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" [routerLink]="['inicio']">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categorías
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../public/tienda.html">Audio</a></li>
+                <li><a class="dropdown-item" href="../public/tienda.html">Video</a></li>
+                <li><a class="dropdown-item" href="../public/tienda.html">Celulares</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" [routerLink]="['inicio']">Servicios</a></li>
+              </ul>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link active" [routerLink]="['inicio']" tabindex="-1" aria-disabled="true">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#" tabindex="-1" aria-disabled="true">Contáctanos</a>
+            </li>
+              <li>
+                  <a class="nav-link active" href="#"  style="color: black">
+            <span class="iconify" data-icon="emojione-monotone:shopping-cart" data-width="30"></span>
+                  </a>
+              </li>
+              <form class="d-flex" >
+            <input class="form-control me-2" type="search" placeholder="¿Qué buscas?" aria-label="Search">
+            <button class="btn btn-light" type="submit" style="color: brown; width: 8rem">Buscar</button>   
+          </form>
+          </ul>
+          
+         <!-- Menú Ususario-->
+            <ul class="nav-item dropdown">
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"  style="color: black">
+                  <span class="iconify" data-icon="ant-design:login-outlined" data-width="30" ></span>
+                Usuario
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="../public/inicio-sesion.html">Iniciar Sesión</a></li>
+                <li><a class="dropdown-item" href="#">Cerrar Cesión</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" [routerLink]="['seguridad/identificar']">Registrese</a></li>
+              </ul>          
+            </ul>    
+          <!-- Menú Configuración-->
+            <a class="nav-link active" href="../public/perfil-usuario.html"  style="color: black">
+                <span class="iconify" data-icon="ci:settings-filled" data-width="30"></span>
+            </a>
+                
+        </div>
+            
+      </div>
+    </nav>
+        
+    </div>      
+    <!-- Fin de la Barra de menú -->    
