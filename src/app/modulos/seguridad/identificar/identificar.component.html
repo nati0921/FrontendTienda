@@ -1,20 +1,47 @@
-<p>identificar works!</p>
-
+<div id="body_2">
+    <div class="container">
         <!--Inicio-->
-       
-        <div class="row align-items-start">
-            <div class="mb-3 row">
-        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-sm-10">
-          <input type="email" class="form-control" id="inputEmail" placeholder="email@example.com">
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
-        <div class="col-sm-10">
-          <input type="password" class="form-control" id="inputPassword">
-        </div>
-      </div>
-              
-     
-    </div> <!--Fin-->
+
+        <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+                <label for="txtNombres" class="form-label">Nombres</label>
+                <input type="text" class="form-control" id="txtNombres" required>
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="txtApellidos" class="form-label">Apellidos</label>
+                <input type="text" class="form-control" id="txtApellidos" required>
+                <div class="valid-feedback">
+                    Este campo es requerido
+                </div>
+            </div>
+            <div class="col-md-8">
+                <label for="txtCorreo" class="form-label">Correo</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="email" class="form-control" id="txtCorreo" aria-describedby="inputGroupPrepend"
+                        required>
+                    <div class="invalid-feedback">
+                        Ingrese un correo valido
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="txtCelular" class="form-label">Celular</label>
+                <input type="text" class="form-control" id="txtCelular" required>
+                <div class="invalid-feedback">
+                    Este campo es requerido
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Registrese</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<!--Fin-->

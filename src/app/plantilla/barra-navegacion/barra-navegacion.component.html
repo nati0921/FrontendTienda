@@ -18,7 +18,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent" style="background-color: #17ABBF">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../public/homepage.html">Home</a>
+            <a class="nav-link active" aria-current="page" [routerLink]="['inicio']">Home</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,7 +59,7 @@
               <li><a class="dropdown-item" href="../public/inicio-sesion.html">Iniciar Sesión</a></li>
               <li><a class="dropdown-item" href="#">Cerrar Cesión</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="../public/registrar-usuario.html">Registrese</a></li>
+              <li><a class="dropdown-item" [routerLink]="['seguridad/identificar']">Registrese</a></li>
             </ul>          
           </ul>    
         <!-- Menú Configuración-->
