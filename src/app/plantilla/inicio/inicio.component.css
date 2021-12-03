@@ -5,6 +5,8 @@
     grid-template-rows: auto auto;
     column-gap: 0;
     grid-row-gap: 0;
+    justify-items: center;
+    align-items: center;
 }
 .grid div{
     
@@ -14,7 +16,7 @@
 }
     
 #imagen1{
-    width:100%;
+    width:auto;
     height:auto;
 }
 .grid div:hover{
