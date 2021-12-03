@@ -10,6 +10,7 @@ import { CrearProductosComponent } from './productos/crear-productos/crear-produ
 import { EditarProductosComponent } from './productos/editar-productos/editar-productos.component';
 import { EliminarProductosComponent } from './productos/eliminar-productos/eliminar-productos.component';
 import { BuscarProductosComponent } from './productos/buscar-productos/buscar-productos.component';
+import { GestionConfiguracionComponent } from './configuracion/gestion-configuracion/gestion-configuracion.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { BuscarProductosComponent } from './productos/buscar-productos/buscar-pr
     CrearProductosComponent,
     EditarProductosComponent,
     EliminarProductosComponent,
-    BuscarProductosComponent
+    BuscarProductosComponent,
+    GestionConfiguracionComponent
   ],
   imports: [
     CommonModule,

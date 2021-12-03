@@ -6,11 +6,13 @@ import { CrearSolicitudComponent } from './gestionar-solicitudes/crear-solicitud
 import { EditarSolicitudComponent } from './gestionar-solicitudes/editar-solicitud/editar-solicitud.component';
 import { EliminarSolicitudComponent } from './gestionar-solicitudes/eliminar-solicitud/eliminar-solicitud.component';
 import { BuscarSolicitudComponent } from './gestionar-solicitudes/buscar-solicitud/buscar-solicitud.component';
-import { CrearComponent } from './productos/crear/crear.component';
 import { CrearProductosComponent } from './productos/crear-productos/crear-productos.component';
 import { EditarProductosComponent } from './productos/editar-productos/editar-productos.component';
 import { EliminarProductosComponent } from './productos/eliminar-productos/eliminar-productos.component';
 import { BuscarProductosComponent } from './productos/buscar-productos/buscar-productos.component';
+import { ContectenosComponent } from './gestionar-solicitudes/contectenos/contectenos.component';
+import { CrearServicioComponent } from './servicios/crear-servicio/crear-servicio.component';
+import { EditarServicioComponent } from './servicios/editar-servicio/editar-servicio.component';
 
 
 @NgModule({
@@ -19,11 +21,13 @@ import { BuscarProductosComponent } from './productos/buscar-productos/buscar-pr
     EditarSolicitudComponent,
     EliminarSolicitudComponent,
     BuscarSolicitudComponent,
-    CrearComponent,
     CrearProductosComponent,
     EditarProductosComponent,
     EliminarProductosComponent,
-    BuscarProductosComponent
+    BuscarProductosComponent,
+    ContectenosComponent,
+    CrearServicioComponent,
+    EditarServicioComponent
   ],
   imports: [
     CommonModule,
