@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { GestionConfiguracionComponent } from './configuracion/gestion-configuracion/gestion-configuracion.component';
 import { BuscarPersonasComponent } from './personas/buscar-personas/buscar-personas.component';
 import { CrearPersonasComponent } from './personas/crear-personas/crear-personas.component';
 import { EditarPersonasComponent } from './personas/editar-personas/editar-personas.component';
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: "productos/eliminarproductos",
     component : EliminarProductosComponent
+  },
+  {
+    path: "gestionconfiguracion",
+    component: GestionConfiguracionComponent
   }
 ];
 

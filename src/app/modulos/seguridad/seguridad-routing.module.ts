@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CambiarClaveComponent } from './cambiar-clave/cambiar-clave.component';
 import { IdentificarComponent } from './identificar/identificar.component';
 import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.component';
+import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: "recuperarclave",
     component : RecuperarClaveComponent
+  },
+  {
+    path: "registrarusuario",
+    component: RegistrarUsuarioComponent
   }
 ];
 

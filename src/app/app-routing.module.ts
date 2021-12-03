@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: () => import("./modulos/seguridad/seguridad.module").then(x => x.SeguridadModule)
   },
   {
+    path: "asesor",
+    loadChildren: () => import("./modulos/asesor/asesor.module").then(x => x.AsesorModule)
+  },
+  {
     path: "",
     pathMatch: "full",
     redirectTo: "/inicio"
