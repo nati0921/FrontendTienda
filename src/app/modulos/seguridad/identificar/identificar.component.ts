@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import * as cryptoJS from 'crypto-js';
 
 @Component({
   selector: 'app-identificar',
@@ -22,8 +23,12 @@ export class IdentificarComponent implements OnInit {
   IdentificarUsuario(){
     let usuario = this.fgValidador.controls['usuario'].value;
     let clave = this.fgValidador.controls['clave'].value;
-    alert(usuario)
-    alert(clave)
+    let claveCifrada =cryptoJS.MD5(clave).toString();
+    //Revisar la base de Datos
+    
+    //ok
+    alert("Datos Correctos")
+  
   }
 
 }
