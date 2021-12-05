@@ -7,13 +7,13 @@
             alt="" style="width: 35px"><strong style="color: darkmagenta" routerLink="/inicio"> OnLineStore</strong></a>
         <a routerLink="/inicio" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </li>
-      <li *ngIf = "!sesionIniciada"><a routerLink="/inicio">Inicio</a></li>
+      <li><a routerLink="/inicio">Inicio</a></li>
       <li *ngIf = "!sesionIniciada"><a routerLink="/cliente/catalogo/verproductos">Tienda</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/asesor/servicios/crearservicio">Servicios</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/asesor/gestionar-solicitudes/contactenos">Contáctenos</a></li>
     </ul>
     <ul class="right hide-on-med-and-down">
-      <li *ngIf = "sesionIniciada"><a routerLink="/seguridad/registrarusuario">Registrese</a></li>
+      <li *ngIf = "!sesionIniciada"><a routerLink="/seguridad/registrarusuario">Registrese</a></li>
       <li *ngIf = "!sesionIniciada"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/seguridad/cerrarsesion">Cerrar Sesión</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/administracion/gestionconfiguracion">Configuración</a></li>

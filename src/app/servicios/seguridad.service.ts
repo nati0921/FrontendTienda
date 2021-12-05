@@ -12,7 +12,7 @@ export class SeguridadService {
 datosUsuarioEnSasion = new BehaviorSubject <ModeloIdentificar> (new ModeloIdentificar());
 
   constructor(private http: HttpClient) { 
-    this.VerificarSesionActual();
+    //this.VerificarSesionActual();
 
   }
 
@@ -30,58 +30,58 @@ datosUsuarioEnSasion = new BehaviorSubject <ModeloIdentificar> (new ModeloIdenti
     })
   }
 
-  //6. Se debe verificar el estado acual de la sesión
-  VerificarSesionActual(){
-    //Validar si hay datos en el navegador
-    let datos = this.ObtenerInformacionSesion();
-    //Llenar los datos (Variable de comportamiento)
-    if(datos){
-      this.RefrescarDatosSesion(datos);
-    }
+
+ //6. Se debe verificar el estado acual de la sesión
+ VerificarSesionActual(){
+  //Validar si hay datos en el navegador
+  let datos = this.ObtenerInformacionSesion();
+  //Llenar los datos (Variable de comportamiento)
+  if(datos){
+    this.RefrescarDatosSesion(datos);
   }
+}
 
-  //7. Parseo a Observable
-  ObtenerDatosUsuarioEnSesion(){
-   return this.datosUsuarioEnSasion.asObservable();
+//7. Parseo a Observable
+ObtenerDatosUsuarioEnSesion(){
+ return this.datosUsuarioEnSasion.asObservable();
+}
+
+//8. Refrescara la información de sesión al ingresar al link de Cerrar Sesión
+RefrescarDatosSesion(datos: ModeloIdentificar){
+  this.datosUsuarioEnSasion.next(datos);
+}
+
+//LocalStorage memoria del navegador
+ //2. Almacenar los datos de la sesión con setItem, como vienen den JSON se convierten a String
+ AlmacenarSesion(datos: ModeloIdentificar){
+  datos.estaIdentificado = true;
+  let datosString = JSON.stringify(datos);
+  localStorage.setItem("datosSesion", datosString);
+  this.RefrescarDatosSesion(datos);
+}
+
+//3.Obtener información de la sesión con getItem, para acceder a los datos de la sesión
+ObtenerInformacionSesion(){
+  let datosString = localStorage.getItem("datosSesion");
+  if(datosString){
+    //convertir String a JSON
+    let datos = JSON.parse(datosString);
+    return datos;
+  }else{
+    return null;
   }
+}
 
-  //8. Refrescara la información de sesión al ingresar al link de Cerrar Sesión
-  RefrescarDatosSesion(datos: ModeloIdentificar){
-    this.datosUsuarioEnSasion.next(datos);
-  }
+//4. Para cerrar sesión, eliminar lod datos de la sesión del localStorage con removeItem
+EliminarInformacionSesion(){
+  localStorage.removeItem("datosSesion");
+  this.RefrescarDatosSesion(new ModeloIdentificar())
 
-  //LocalStorage memoria del navegador
-   //2. Almacenar los datos de la sesión con setItem, como vienen den JSON se convierten a String
-   AlmacenarSesion(datos: ModeloIdentificar){
-     datos.estaIdentificado = true;
-    let datosString = JSON.stringify(datos);
-    localStorage.setItem("datosSesion", datosString);
-  }
+}
 
-  //3.Obtener información de la sesión con getItem, para acceder a los datos de la sesión
-  ObtenerInformacionSesion(){
-    let datosString = localStorage.getItem("datosSesion");
-    if(datosString){
-      //convertir String a JSON
-      let datos = JSON.parse(datosString);
-      return datos;
-    }else{
-      return null;
-    }
-  }
-
-  //4. Para cerrar sesión, eliminar lod datos de la sesión del localStorage con removeItem
-  EliminarInformacionSesion(){
-    localStorage.removeItem("datosSesion");
-    this.RefrescarDatosSesion(new ModeloIdentificar())
-
-  }
-
-  //5. Métodos para validar inicio de sesión
-  SeHaIniciadoSesion(){
-   let datosString = localStorage.getItem("datosSesion");
-   return datosString
-  }
-
-
+//5. Métodos para validar inicio de sesión
+SeHaIniciadoSesion(){
+ let datosString = localStorage.getItem("datosSesion");
+ return datosString
+}
 }
