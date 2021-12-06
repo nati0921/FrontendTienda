@@ -8,7 +8,7 @@
         <a routerLink="/inicio" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </li>
       <li><a routerLink="/inicio">Inicio</a></li>
-      <li *ngIf = "!sesionIniciada"><a routerLink="/cliente/catalogo/verproductos">Tienda</a></li>
+      <li><a routerLink="/cliente/catalogo/verproductos">Tienda</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/asesor/servicios/crearservicio">Servicios</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/asesor/gestionar-solicitudes/contactenos">Contáctenos</a></li>
     </ul>
