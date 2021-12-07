@@ -11,12 +11,13 @@
       <li><a routerLink="/cliente/catalogo/verproductos">Tienda</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/asesor/servicios/crearservicio">Servicios</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/asesor/gestionar-solicitudes/contactenos">Contáctenos</a></li>
+      <li *ngIf = "sesionIniciada"><a routerLink="/asesor/gestionar-solicitudes/contactenos"><i class="material-icons prefix">shopping_cart</i></a></li>
     </ul>
     <ul class="right hide-on-med-and-down">
       <li *ngIf = "!sesionIniciada"><a routerLink="/seguridad/registrarusuario">Registrese</a></li>
       <li *ngIf = "!sesionIniciada"><a routerLink="/seguridad/identificar">Iniciar Sesión</a></li>
       <li *ngIf = "sesionIniciada"><a routerLink="/seguridad/cerrarsesion">Cerrar Sesión</a></li>
-      <li *ngIf = "sesionIniciada"><a routerLink="/administracion/gestionconfiguracion">Configuración</a></li>
+      <li *ngIf = "sesionIniciada"><a routerLink="/administracion/gestionconfiguracion"><i class="material-icons prefix">settings</i></a></li>
     </ul>
   </div>
 </nav>
