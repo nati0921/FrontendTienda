@@ -12,7 +12,7 @@ export class SeguridadService {
 datosUsuarioEnSasion = new BehaviorSubject <ModeloIdentificar> (new ModeloIdentificar());
 
   constructor(private http: HttpClient) { 
-    //this.VerificarSesionActual();
+    this.VerificarSesionActual();
 
   }
 
