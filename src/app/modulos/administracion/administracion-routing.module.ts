@@ -28,19 +28,19 @@ const routes: Routes = [
     component : EliminarPersonasComponent
   },
   {
-    path: "productos/buscarproductos",
+    path: "buscarproductos",
     component : BuscarProductosComponent
   },
   {
-    path: "productos/crearproductos",
+    path: "crearproductos",
     component : CrearProductosComponent
   },
   {
-    path: "productos/editarproductos",
+    path: "editarproductos/:id",
     component : EditarProductosComponent
   },
   {
-    path: "productos/eliminarproductos",
+    path: "eliminarproductos/:id",
     component : EliminarProductosComponent
   },
   {
