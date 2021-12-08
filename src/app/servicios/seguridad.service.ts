@@ -90,7 +90,7 @@ ObtnerToken(){
   let datosString = localStorage.getItem("datosSesion");
   if (datosString){
     let datos = JSON.parse(datosString);
-    return datos;
+    return datos.tk;
   }else{
     return "";
   }

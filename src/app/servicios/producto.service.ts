@@ -50,7 +50,7 @@ token: String ="";
    //4. Eliminar  productos por Id , en este caso se requiere validar el token y recibir un id
   //Se envia por metodo delete los datos a la url indicada
   EliminarProducto(id: string):Observable<any>{
-    return this.http.put<ModeloProducto>(`${this.url}/productos/${id}`,{
+    return this.http.delete<ModeloProducto>(`${this.url}/productos/${id}`,{
       headers: new HttpHeaders({
         'Authorization': `Bearer ${this.token}`
       })
