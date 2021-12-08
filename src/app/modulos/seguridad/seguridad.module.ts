@@ -8,6 +8,7 @@ import { RecuperarClaveComponent } from './recuperar-clave/recuperar-clave.compo
 import { RegistrarUsuarioComponent } from './registrar-usuario/registrar-usuario.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
     CommonModule,
     SeguridadRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ]
 })
 export class SeguridadModule { }

@@ -41,7 +41,7 @@ BuscarProducto(){
     this.fgValidador.controls['imagen'].setValue(datos.imagen);
     this.fgValidador.controls['precio'].setValue(datos.precio);
     this.fgValidador.controls['existencia'].setValue(datos.existencia);
-    this.fgValidador.controls['categoria'].setValue(datos.categoriaProductoId);
+    this.fgValidador.controls['categoria'].setValue(datos.idCategoria);
   },(error:any)=>{
     alert("El producto no existe")
   })
@@ -53,14 +53,14 @@ EditarProducto(){
   let imagen = this.fgValidador.controls['imagen'].value;
   let precio = parseInt(this.fgValidador.controls['precio'].value);
   let existencia = this.fgValidador.controls['existencia'].value;
-  let categoria = this.fgValidador.controls['categoria'].value;
+  let idcategoria = this.fgValidador.controls['categoria'].value;
   let p = new ModeloProducto();
   p.nombreProducto = nombreProducto;
   p.descripcionProducto = descripcionProducto;
   p.imagen = imagen;
   p.precio = precio;
   p.existencia = existencia;
-  p.idCategoria = categoria;
+  p.idCategoria = idcategoria;
   p.id = this.id;
 
   this.productoServicio.ActualizarProducto(p).subscribe((datos: ModeloProducto)=>{
