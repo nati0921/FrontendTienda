@@ -12,19 +12,19 @@ import { EliminarProductosComponent } from './productos/eliminar-productos/elimi
 
 const routes: Routes = [
   {
-    path: "personas/buscarpersonas",
+    path: "buscarpersonas",
     component : BuscarPersonasComponent
   },
   {
-    path: "personas/crearpersonas",
+    path: "crearpersonas",
     component : CrearPersonasComponent
   },
   {
-    path: "personas/editarpersonas",
+    path: "editarpersonas",
     component : EditarPersonasComponent
   },  
   {
-    path: "personas/eliminarpersonas",
+    path: "eliminarpersonas",
     component : EliminarPersonasComponent
   },
   {
