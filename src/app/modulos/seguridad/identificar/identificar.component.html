@@ -32,6 +32,16 @@
             </div>
           </div>    
 
+          <!-- ReCaptcha  -->
+            <br>
+            <form [formGroup]="fgValidador">
+                <ngx-recaptcha2 #captchaElem
+                [siteKey]="siteKey"
+                formControlName="recaptcha">
+                </ngx-recaptcha2>
+            </form>
+            <br>
+
             <!-- Form Button Section  -->
 
         <div class="center">
