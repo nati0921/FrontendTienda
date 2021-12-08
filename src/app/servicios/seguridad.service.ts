@@ -84,4 +84,16 @@ SeHaIniciadoSesion(){
  let datosString = localStorage.getItem("datosSesion");
  return datosString
 }
+
+//Revisa el LocalStorage y recupera el token
+ObtnerToken(){
+  let datosString = localStorage.getItem("datosSesion");
+  if (datosString){
+    let datos = JSON.parse(datosString);
+    return datos;
+  }else{
+    return "";
+  }
+}
+
 }
