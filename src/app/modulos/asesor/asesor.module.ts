@@ -13,6 +13,8 @@ import { BuscarProductosComponent } from './productos/buscar-productos/buscar-pr
 import { ContectenosComponent } from './gestionar-solicitudes/contectenos/contectenos.component';
 import { CrearServicioComponent } from './servicios/crear-servicio/crear-servicio.component';
 import { EditarServicioComponent } from './servicios/editar-servicio/editar-servicio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { EditarServicioComponent } from './servicios/editar-servicio/editar-serv
   ],
   imports: [
     CommonModule,
-    AsesorRoutingModule
+    AsesorRoutingModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ]
 })
 export class AsesorModule { }

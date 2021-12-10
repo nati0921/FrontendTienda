@@ -6,6 +6,8 @@ import { EnviarSolicitudesComponent } from './enviar-solicitudes/enviar-solicitu
 import { RealizarPedidoComponent } from './realizar-pedido/realizar-pedido.component';
 import { VerificarSolicitudesComponent } from './verificar-solicitudes/verificar-solicitudes.component';
 import { VerProductosComponent } from './catalogo/ver-productos/ver-productos.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgxCaptchaModule } from 'ngx-captcha';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { VerProductosComponent } from './catalogo/ver-productos/ver-productos.co
   ],
   imports: [
     CommonModule,
-    ClienteRoutingModule
+    ClienteRoutingModule,
+    ReactiveFormsModule,
+    NgxCaptchaModule
   ]
 })
 export class ClienteModule { }
