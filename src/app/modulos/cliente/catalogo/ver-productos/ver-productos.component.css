@@ -1,0 +1,23 @@
+.imagenproducto{
+    width: 200px;
+    margin-left: 0px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto 20px;
+    column-gap: 1rem;
+    align-items: right;
+    justify-content:right;
+}
+
+.container{
+    background-color: aliceblue;
+    
+}
+
+#cuerpo_2{
+    background-color: aliceblue;
+
+}

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ValidadorSesionGuard } from 'src/app/guardianes/validador-sesion.guard';
 import { GestionConfiguracionComponent } from './configuracion/gestion-configuracion/gestion-configuracion.component';
 import { BuscarPersonasComponent } from './personas/buscar-personas/buscar-personas.component';
 import { CrearPersonasComponent } from './personas/crear-personas/crear-personas.component';
@@ -33,19 +34,23 @@ const routes: Routes = [
   },
   {
     path: "crearproductos",
-    component : CrearProductosComponent
+    component : CrearProductosComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: "editarproductos/:id",
-    component : EditarProductosComponent
+    component : EditarProductosComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: "eliminarproductos/:id",
-    component : EliminarProductosComponent
+    component : EliminarProductosComponent,
+    canActivate: [ValidadorSesionGuard]
   },
   {
     path: "gestionconfiguracion",
-    component: GestionConfiguracionComponent
+    component: GestionConfiguracionComponent,
+    canActivate: [ValidadorSesionGuard]
   }
 ];
 
