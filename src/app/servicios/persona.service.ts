@@ -31,7 +31,7 @@ export class PersonaService {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}`
       })
-    });
+    })
   }
 
   EditarPersona(persona : ModeloPersona):Observable<ModeloPersona>{
@@ -40,7 +40,7 @@ export class PersonaService {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}`
       })
-    });
+    })
   }
 
   EliminarPersona(id : string):Observable<any>{
@@ -49,7 +49,7 @@ export class PersonaService {
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}`
       })
-    });
+    })
   }
 
 
