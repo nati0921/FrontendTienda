@@ -25,7 +25,7 @@ const routes: Routes = [
     component : EditarPersonasComponent
   },  
   {
-    path: "eliminarpersonas",
+    path: "eliminarpersonas/:id",
     component : EliminarPersonasComponent
   },
   {

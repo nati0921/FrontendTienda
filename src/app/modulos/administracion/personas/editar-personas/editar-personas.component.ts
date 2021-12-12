@@ -48,6 +48,7 @@ export class EditarPersonasComponent implements OnInit {
     p.id = this.id;
     this.servicioPersona.EditarPersona(p).subscribe((datos:ModeloPersona)=>{
       alert("La persona se editó correctamente");
+      this.router.navigate(["/administracion/buscarpersonas"])
     },(error:any)=>{
       alert("Error en la edición");
     }

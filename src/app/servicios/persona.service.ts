@@ -27,7 +27,7 @@ export class PersonaService {
 
   CrearPersona(persona : ModeloPersona):Observable<ModeloPersona>{
     //return this.http.post("http://localhost:3000/personas",persona,{
-      return this.http.post("http://localhost:3000/usuarios",persona,{
+      return this.http.post<ModeloPersona>("http://localhost:3000/usuarios",persona,{
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}`
       })
@@ -45,7 +45,7 @@ export class PersonaService {
 
   EliminarPersona(id : string):Observable<any>{
     //return this.http.delete<ModeloPersona>("http://localhost:3000/personas",{
-      return this.http.delete<ModeloPersona>("http://localhost:3000/usuarios",{
+      return this.http.delete<ModeloPersona>(`http://localhost:3000/usuarios/${id}`,{
       headers: new HttpHeaders({
         'Authorization':`Bearer ${this.token}`
       })
