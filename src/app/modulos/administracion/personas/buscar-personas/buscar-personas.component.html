@@ -1,5 +1,27 @@
 <h1>BUSCAR PERSONAS</h1>
 
+
+<table class="table responsive">
+<thead>
+  <tr>
+    <th>NOMBRE</th>
+    <th>APELLIDOS</th>
+    <th>DIRECCION</th>
+    <th>CELULAR</th>
+    <th>CORREO</th>
+  </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let p of ListaPersonas">
+      <td>{{p.nombres}}</td>
+      <td>{{p.apellidos}}</td>
+      <td>{{p.direccion}}</td>
+      <td>{{p.correo}}</td>
+      <td>Editar</td>
+    </tr>
+</tbody>
+</table>
+
 <div class="container">
 <form class="row g-3 needs-validation" novalidate>
   

@@ -1,47 +1,62 @@
-<h1>CREAR PERSONAS</h1>
-
 <div class="container">
-<form class="row g-3 needs-validation" novalidate>
-    <div class="col-md-4">
-      <label for="txtNombres" class="form-label">Nombres</label>
-      <input type="text" class="form-control" id="txtNombres" required>
-      <div class="valid-feedback">
-        campo requerido
+
+  <div class="container">
+    <form [formGroup]="fgValidador" (ngSubmit)="GuardarPersona()"> <!-- Change The Form Method From Here-->
+      <div class="card-panel z-depth-5">
+    <!-- Form Logo Section  -->
+    
+    <div class="row margin">
+      <div class="col s12 m12 l12 center">
+          <img src="https://www.mejorconweb.com/images/servicios/paginas-web.svg"
+           alt="" class="responsive-img circle" style="width:100px;">
+          <p>Crear Personas</p>
       </div>
-    </div>
-    <div class="col-md-4">
-      <label for="txtApellidos" class="form-label">Apellidos</label>
-      <input type="text" class="form-control" id="txtApellidos" required>
-      <div class="valid-feedback">
-        campo requerido
+    </div>  
+    
+    
+    <div class="col s12 m12 l12">
+      <div class="input-field">
+          <i class="material-icons prefix">redeem</i>
+          <input formControlName = 'nombrePersona' type="text" name="nombrePersona" id="nombrePersona">
+          <label for="nombrePersona" class="active">Nombre Persona</label>
       </div>
+  </div>
+  
+  <div class="col s12 m12 l12">
+    <div class="input-field">
+        <i class="material-icons prefix">redeem</i>
+        <input formControlName = 'apellidoPersona' type="text" name="apellidoPersona" id="apellidoPersona">
+        <label for="apellidoPersona" class="active">Apellido Persona</label>
     </div>
-    <div class="col-md-4">
-      <label for="txtcorreo" class="form-label">Username</label>
-      <div class="input-group has-validation">
-        <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="txtcorreo" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          campo requerido
-        </div>
-      </div>
+  </div>
+      
+  <div class="col s12 m12 l12">
+    <div class="input-field">
+        <i class="material-icons prefix">redeem</i>
+        <input formControlName = 'direccionPersona' type="text" name="direccionPersona" id="direccionPersona">
+        <label for="direccionPersona" class="active">Dirección Persona</label>
     </div>
-    <div class="col-md-6">
-      <label for="txtDireccion" class="form-label">Dirección</label>
-      <input type="text" class="form-control" id="txtDireccion" required>
-      <div class="invalid-feedback">
-        campo requerido
-      </div>
+  </div>
+  <div class="col s12 m12 l12">
+    <div class="input-field">
+        <i class="material-icons prefix">redeem</i>
+        <input formControlName = 'celularPersona' type="text" name="celularPersona" id="celularPersona">
+        <label for="celularPersona" class="active">Celular Persona</label>
     </div>
-    <div class="col-md-6">
-        <label for="txtcelular" class="form-label">Celular</label>
-        <input type="text" class="form-control" id="txtcelular" required>
-        <div class="invalid-feedback">
-          campo requerido
-        </div>
-      </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Guardar</button>
-    </div>
-  </form>
+  </div>
+      
+  
+  
+  <!-- Form Button Section  -->
+  
+  <div class="center">
+    <input [disabled]="!fgValidador.valid" type="submit" value="Crear" name="envio"
+    class="btn waves-effect waves-light "
+    style="width:100%; background-color: #2c1ef3;" >
+</div>
+
+
+</div>
+</form>
+</div>
 </div>
