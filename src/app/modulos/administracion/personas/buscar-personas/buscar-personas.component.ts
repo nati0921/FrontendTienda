@@ -14,6 +14,7 @@ export class BuscarPersonasComponent implements OnInit {
   constructor(private servicioPersona: PersonaService) { }
 
   ngOnInit(): void {
+    this.ObtenerListadoPersonas();
   }
 
   ObtenerListadoPersonas()

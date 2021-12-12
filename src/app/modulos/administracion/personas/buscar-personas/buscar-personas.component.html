@@ -1,70 +1,32 @@
-<h1>BUSCAR PERSONAS</h1>
 
-
-<table class="table responsive">
-<thead>
-  <tr>
-    <th>NOMBRE</th>
-    <th>APELLIDOS</th>
-    <th>DIRECCION</th>
-    <th>CELULAR</th>
-    <th>CORREO</th>
-  </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let p of ListaPersonas">
+<div class="container">
+ 
+  <br>
+  <a routerLink="/administracion/crearpersonas" class="btn light-green darken-2">Nueva Persona</a>
+  <table class="table responsive">
+  <thead>
+    <tr>
+      <th>NOMBRE</th>
+      <th>APELLIDOS</th>
+      <th>DIRECCION</th>
+      <th>CELULAR</th>
+      <th>CORREO</th>
+      <th>EDICION</th>
+      <th>ELIMINACION</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor ="let p of ListaPersonas">
       <td>{{p.nombres}}</td>
       <td>{{p.apellidos}}</td>
       <td>{{p.direccion}}</td>
+      <td>{{p.celular}}</td>
       <td>{{p.correo}}</td>
-      <td>Editar</td>
+      <td><a routerLink="/administracion/editarpersonas/{{p.id}}" class="btn btn-primary">Editar</a></td>
+      <td><a routerLink="/administracion/eliminarpersonas/{{p.id}}" class="btn red lighten-1">Eliminar</a></td>
     </tr>
-</tbody>
-</table>
-
-<div class="container">
-<form class="row g-3 needs-validation" novalidate>
+  </tbody>
   
-    <div class="col-md-4">
-      <label for="txtNombres" class="form-label">Nombres</label>
-      <input type="text" class="form-control" id="txtNombres" required>
-      <div class="valid-feedback">
-        campo requerido
-      </div>
-    </div>
-    <div class="col-md-4">
-      <label for="txtApellidos" class="form-label">Apellidos</label>
-      <input type="text" class="form-control" id="txtApellidos" required>
-      <div class="valid-feedback">
-        campo requerido
-      </div>
-    </div>
-    <div class="col-md-4">
-      <label for="txtcorreo" class="form-label">Username</label>
-      <div class="input-group has-validation">
-        <span class="input-group-text" id="inputGroupPrepend">@</span>
-        <input type="text" class="form-control" id="txtcorreo" aria-describedby="inputGroupPrepend" required>
-        <div class="invalid-feedback">
-          campo requerido
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <label for="txtDireccion" class="form-label">Dirección</label>
-      <input type="text" class="form-control" id="txtDireccion" required>
-      <div class="invalid-feedback">
-        campo requerido
-      </div>
-    </div>
-    <div class="col-md-6">
-        <label for="txtcelular" class="form-label">Celular</label>
-        <input type="text" class="form-control" id="txtcelular" required>
-        <div class="invalid-feedback">
-          campo requerido
-        </div>
-      </div>
-    <div class="col-12">
-      <button class="btn btn-primary" type="submit">Buscar</button>
-    </div>
-  </form>
-</div>
+  </table>
+  </div>
+
